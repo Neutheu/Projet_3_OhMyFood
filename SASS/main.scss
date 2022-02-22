@@ -1,0 +1,28 @@
+@import "./utils/variables"; 
+
+body {
+    font-family: $font-texte;
+}
+.header {
+    display: flex;
+    &__logo {
+        font-family: $font-logo_titre;
+        font-size: 2em;
+        display: flex;
+        justify-content: center;
+        padding: 15px 0 15px 0;
+        ;
+    }
+}
+
+.first_section {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0 15px 0;
+    background-color: rgb(211, 211, 211);
+}
+
+
+.fa-location-dot {
+    margin: 0 20px 0 -30px;
+}
