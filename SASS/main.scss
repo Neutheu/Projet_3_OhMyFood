@@ -15,14 +15,46 @@ body {
     }
 }
 
-.first_section {
+.location {
     display: flex;
     justify-content: center;
     padding: 15px 0 15px 0;
-    background-color: rgb(211, 211, 211);
+    background-color: #eaeaea;
+    font-weight: 600;
+    color:rgb(31, 31, 31);
+    box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.185);
 }
 
 
 .fa-location-dot {
     margin: 0 20px 0 -30px;
+}
+
+.first_section_titre {
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.4em;
+    margin: 0 0 2% 0;
+}
+
+.first_section_texte {
+    text-align: center;
+    color :rgb(78, 78, 78)
+}
+
+.button {
+    display: block;
+    margin: 8% auto 0 auto;
+    font-size: 0.9em;
+    background-color: $colour-primary;
+    color : white;
+    padding: 10px 15px 10px 15px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.425);
+}
+
+.first_section {
+    background-color: #f6f6f6;
+    padding: 10% 0 15% 0;
 }
