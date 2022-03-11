@@ -49,6 +49,11 @@ body {
   border: none;
   box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.23);
 }
+.button_menu {
+  padding: 10px 35px 10px 35px;
+  font-size: 0.9em;
+  margin-top: 50px;
+}
 
 .first_section {
   background-color: #f6f6f6;
@@ -226,7 +231,7 @@ body {
 }
 
 /* Page menu */
-.header {
+.header_menu {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -240,6 +245,10 @@ body {
   font-size: 1.5em;
   margin: 21.4px 0 0 10px;
   color: black;
+}
+
+.main_menu {
+  background-color: #f6f6f6;
 }
 
 .image_first_section {
@@ -266,7 +275,14 @@ body {
 }
 
 .partie_menu {
-  margin: 35px 0 25px 0;
+  margin: 35px 0 5px 0;
+  color: #353535;
+}
+
+.trait {
+  width: 40px;
+  height: 18px;
+  border-top: 3.3px solid #99E2D0;
 }
 
 .nom_plat {
