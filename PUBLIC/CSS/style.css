@@ -184,6 +184,29 @@ body {
   margin: 10px 20px 0 0;
 }
 
+.coeur_animation {
+  height: fit-content;
+  position: relative;
+  top: 10px;
+  left: 66.5px;
+  opacity: 0;
+  color: white;
+  transition: color 1500ms;
+}
+.coeur_animation_positionlanote {
+  left: 65.3px;
+}
+.coeur_animation_positionalafran {
+  left: 80.4px;
+}
+.coeur_animation_positionledelice {
+  left: 65.2px;
+}
+.coeur_animation:hover {
+  opacity: 1;
+  color: blue;
+}
+
 .nom_restau_accueil {
   font-weight: 700;
   margin-bottom: 5px;

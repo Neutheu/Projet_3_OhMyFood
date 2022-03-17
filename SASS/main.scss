@@ -14,7 +14,6 @@ body {
     padding: 15px 0 15px 0;
 }
 
-
 .location {
     display: flex;
     justify-content: center;
@@ -186,6 +185,29 @@ body {
 
 .coeur_acceuil {
     margin: 10px 20px 0 0;
+}
+
+.coeur_animation {
+    height: fit-content;
+    position: relative;
+    top: 10px;
+    left: 66.5px;
+    opacity: 0;
+    color: white;
+    transition: color 1500ms;
+    &_positionlanote {
+        left: 65.3px;
+    }
+    &_positionalafran {
+        left: 80.4px;
+    }
+    &_positionledelice {
+        left: 65.2px;
+    }
+    &:hover {
+        opacity: 1;
+        color: blue;
+    }
 }
 
 .nom_restau_accueil {
