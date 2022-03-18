@@ -194,7 +194,7 @@ body {
     left: 66.5px;
     opacity: 0;
     color: white;
-    transform: scale(0.1);
+    transform: scale(0.5);
     transition: transform 300ms;
     &_positionlanote {
         left: 65.3px;
@@ -207,7 +207,10 @@ body {
     }
     &:hover {
         opacity: 1;
-        color: blue;
+        background: -webkit-gradient(linear, left top, left bottom, from($colour-primary), to($colour-secondary));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
         transform: scale(1);
     }
 }
