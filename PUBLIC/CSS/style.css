@@ -209,7 +209,7 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  transform: scale(1);
+  transform: scale(1.1);
 }
 
 .nom_restau_accueil {
