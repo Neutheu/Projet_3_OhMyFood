@@ -356,7 +356,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  z-index: 2;
 }
 
 .centrage_logo {
@@ -408,6 +407,7 @@ body {
 
 .détails_nom_plat {
   width: 100%;
+  overflow: hidden;
 }
 
 .détails_plat {
@@ -421,7 +421,7 @@ body {
 
 .prix {
   font-weight: 700;
-  margin-right: 10px;
+  margin: 0 10px 0 5px;
 }
 
 .trait {
@@ -444,7 +444,7 @@ body {
 
 .plat {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   align-items: center;
   background-color: white;
   border-radius: 20px;
@@ -454,33 +454,60 @@ body {
 }
 @media (min-width: 768px) {
   .plat {
-    min-width: 325px;
+    width: 325px;
   }
 }
-.plat:hover > .fa-circle-check {
-  animation: ajout_plat 700ms;
+.plat:hover .background_ajout {
+  animation: ajout_plat 600ms;
   animation-fill-mode: forwards;
+}
+.plat:hover .fa-circle-check {
+  animation: rotation_icone 600ms;
+  animation-fill-mode: forwards;
+}
+
+.background_ajout {
+  position: absolute;
+  background-color: #99E2D0;
+  padding: 18.8px 0 18.8px 0;
+  border-radius: 0 20px 20px 0;
+  font-size: 1.4em;
+  height: 22.4px;
+  width: 0;
+  visibility: hidden;
 }
 
 @keyframes ajout_plat {
   from {
-    transform: scaleX(0) translate(65px);
+    padding: 18.8px 0 18.8px 0;
     transform-origin: right;
     position: static;
+    width: 0;
+    visibility: visible;
   }
   to {
-    transform: scaleX(1) translate(0);
+    padding: 18.8px;
     position: static;
+    width: 22.4px;
+    visibility: visible;
   }
 }
 .fa-circle-check {
-  position: absolute;
-  background-color: #99E2D0;
-  padding: 18.8px;
-  border-radius: 0 20px 20px 0;
-  font-size: 1.4em;
   color: white;
-  transform: scaleX(0);
+}
+
+@keyframes rotation_icone {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+.points_suspension {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .apparition_entrees {
