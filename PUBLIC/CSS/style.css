@@ -75,6 +75,12 @@ body {
   margin: 0 20px 0 -30px;
 }
 
+.first_section {
+  background-color: #f6f6f6;
+  padding: 35px 0 55px 0;
+  margin-bottom: 55px;
+}
+
 .first_section_titre {
   text-align: center;
   font-weight: 900;
@@ -108,12 +114,6 @@ body {
   padding: 10px 35px 10px 35px;
   font-size: 0.9em;
   margin-top: 50px;
-}
-
-.first_section {
-  background-color: #f6f6f6;
-  padding: 35px 0 55px 0;
-  margin-bottom: 55px;
 }
 
 .second_section {
@@ -198,6 +198,19 @@ body {
   }
 }
 
+.cards_restau {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+@media (min-width: 840px) {
+  .cards_restau {
+    justify-content: flex-start;
+    margin-left: 20px;
+  }
+}
+
 .card_restau {
   width: 280px;
   height: 200px;
@@ -207,6 +220,11 @@ body {
   box-shadow: 2px 2px 10px -2px #a0a0a0;
   text-decoration: none;
   color: black;
+}
+@media (min-width: 840px) {
+  .card_restau {
+    margin-right: 20px;
+  }
 }
 
 .image_card_restau {
@@ -250,24 +268,6 @@ body {
   font-size: 0.9em;
 }
 
-.coeur_animation {
-  margin: 10px 20px 0 0;
-  height: fit-content;
-  -webkit-text-fill-color: white;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
-  transform: scale(1);
-  transition: transform 1s;
-}
-.coeur_animation:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-color: white;
-  transform: scale(1.3);
-}
-
 .nom_restau_accueil {
   font-weight: 700;
   margin-bottom: 5px;
@@ -286,11 +286,22 @@ body {
   color: #217460;
 }
 
-.cards_restau {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+.coeur_animation {
+  margin: 10px 20px 0 0;
+  height: fit-content;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  transform: scale(1);
+  transition: transform 1s;
+}
+.coeur_animation:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: white;
+  transform: scale(1.3);
 }
 
 /* Footer */
@@ -367,6 +378,14 @@ body {
   height: 100%;
 }
 
+.second_section_menu {
+  padding: 30px 15px 40px 15px;
+  background-color: #f6f6f6;
+  border-radius: 40px 40px 0 0;
+  position: relative;
+  top: -40px;
+}
+
 .titre_menu {
   display: flex;
   justify-content: space-between;
@@ -377,28 +396,18 @@ body {
   font-size: 1.5em;
 }
 
-.second_section_menu {
-  padding: 30px 15px 40px 15px;
-  background-color: #f6f6f6;
-  border-radius: 40px 40px 0 0;
-  position: relative;
-  top: -40px;
-}
-
 .partie_menu {
   margin: 35px 0 5px 0;
   color: #353535;
 }
 
-.trait {
-  width: 40px;
-  height: 18px;
-  border-top: 3.3px solid #99E2D0;
-}
-
 .nom_plat {
   font-weight: 700;
   margin: 10px 0px 5px 10px;
+}
+
+.détails_nom_plat {
+  width: 100%;
 }
 
 .détails_plat {
@@ -412,7 +421,13 @@ body {
 
 .prix {
   font-weight: 700;
-  margin-right: 5px;
+  margin-right: 10px;
+}
+
+.trait {
+  width: 40px;
+  height: 18px;
+  border-top: 3.3px solid #99E2D0;
 }
 
 .centrage_plat {
@@ -439,7 +454,7 @@ body {
 }
 @media (min-width: 768px) {
   .plat {
-    min-width: 315px;
+    min-width: 325px;
   }
 }
 .plat:hover > .fa-circle-check {
@@ -466,10 +481,6 @@ body {
   font-size: 1.4em;
   color: white;
   transform: scaleX(0);
-}
-
-.détails_nom_plat {
-  width: 100%;
 }
 
 .apparition_entrees {

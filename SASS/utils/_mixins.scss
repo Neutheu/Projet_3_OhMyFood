@@ -1,0 +1,6 @@
+@mixin centrage_responsive {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
