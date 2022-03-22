@@ -30,10 +30,6 @@ body {
     visibility: hidden;
   }
   
-  
- 
-  
-  
   @keyframes loading {
     from {
         z-index: 10;
@@ -41,7 +37,6 @@ body {
         visibility: visible;
     }
     
-
     to {
         z-index: 10;
         transform: rotate(2turn);
@@ -133,12 +128,23 @@ body {
     max-width: 375px;
     margin-left: auto;
     margin-right: auto;
+    @media (min-width:1020px) {
+        margin: 0;
+        max-width: none;
+    }
 }
 
 .second_section_title {
     font-weight: 900;
     font-size: 1.4em;
     margin: 0 0 40px 15px;
+}
+
+.boutons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .fonctionnement_button {
@@ -187,7 +193,13 @@ body {
 .third_section_title {
     font-weight: 900;
     font-size: 1.4em;
-    margin: 0 0 20px 15px;
+    margin: 0 auto 20px auto;
+    padding-left: 15px;
+    max-width: 375px;
+    @media (min-width:559px) {
+        margin: 0 0 20px 15px;
+        padding: 0;
+    }    
 }
 
 .card_restau {
@@ -249,7 +261,7 @@ body {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
     transform: scale(1);
-    transition: transform 500ms;
+    transition: transform 1s;
     &:hover {
         background: -webkit-gradient(linear, left top, left bottom, from($colour-primary), to($colour-secondary));
         -webkit-background-clip: text;
@@ -283,6 +295,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    
 }
 
 /* Footer */
@@ -319,6 +332,20 @@ body {
 }
 
 /* Page menu */
+
+.indication_scroll{
+    display: none;
+    @media (min-width:768px) {
+        display: block;
+        position: absolute;
+        margin: 20px;
+        padding: 10px;
+        width: fit-content;
+        background-color: $colour-tertiary;
+        border-radius: 10px;
+    }
+   
+}
 
 .header_menu {
     display: flex;
@@ -377,7 +404,8 @@ body {
 
 .nom_plat {
     font-weight: 700;
-    margin-bottom: 5px;
+    margin: 10px 0px 5px 10px;
+
 }
 
 .détails_plat {
@@ -386,19 +414,75 @@ body {
     justify-content: space-between;
     font-size: 0.9em;
     color: #353535;
+    margin: 0 0 10px 10px;
 }
 
 .prix {
     font-weight: 700;
+    margin-right: 5px;
 }
 
+.centrage_plat {
+    display: block;
+    @media (min-width:768px) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
 .plat {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     background-color: white;
-    padding: 10px;
     border-radius: 20px;
     box-shadow: 1px 2px 5px 2px rgb(0 0 0 / 9%);
     margin-bottom: 15px;
+    max-width: 400px;
+    @media (min-width:768px) {
+        min-width: 315px;
+    }
+    &:hover {
+        & > .fa-circle-check {
+               animation: ajout_plat 700ms;
+               animation-fill-mode: forwards;
+        }
+    }
 }
+
+@keyframes ajout_plat {
+    from {
+        transform: scaleX(0) translate(65px);
+        transform-origin: right;
+        position: static;
+    }
+
+    to {
+        transform: scaleX(1) translate(0);
+        position: static;
+    }
+}
+
+.fa-circle-check {
+    position: absolute;
+    background-color: $colour-tertiary;
+    padding: 18.8px;
+    border-radius: 0 20px 20px 0;
+    font-size: 1.4em;
+    color: white;
+    transform: scaleX(0);
+}
+
+
+
+.détails_nom_plat {
+    width: 100%;
+}
+
+
+
+
 
 .apparition_entrees {
     animation: apparition_entrees 2s;
