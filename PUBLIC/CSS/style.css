@@ -292,8 +292,6 @@ body {
   -webkit-text-fill-color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
-  transform: scale(1);
-  transition: transform 1s;
 }
 .coeur_animation:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
@@ -301,9 +299,18 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-color: white;
-  transform: scale(1.3);
+  animation: remplissage_coeur 1s;
+  animation-fill-mode: forwards;
 }
 
+@keyframes remplissage_coeur {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
 /* Footer */
 .footer {
   background-color: #353535;
