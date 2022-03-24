@@ -17,6 +17,7 @@ body {
     padding: 15px 0 15px 0;
 }
 
+    /* Animation loading-spinner */
 
 .loading {
     position: sticky;
@@ -32,19 +33,19 @@ body {
     visibility: hidden;
   }
   
-        @keyframes loading {
-            from {
-                z-index: 10;
-                transform: rotate(0turn);
-                visibility: visible;
-            }
-            
-            to {
-                z-index: 10;
-                transform: rotate(2turn);
-                visibility: visible;
-            }
+    @keyframes loading {
+        from {
+            z-index: 10;
+            transform: rotate(0turn);
+            visibility: visible;
         }
+        
+        to {
+            z-index: 10;
+            transform: rotate(2turn);
+            visibility: visible;
+        }
+    }
 
 .overlay_loading {
     position: absolute;
@@ -58,17 +59,19 @@ body {
     margin-top: -210px;
  }
 
-        @keyframes overlay_loading {
-            from {
-                visibility: visible;
-                z-index: 9;
-            }
-
-            to {
-                visibility: visible;
-                z-index: 9;
-            }
+    @keyframes overlay_loading {
+        from {
+            visibility: visible;
+            z-index: 9;
         }
+
+        to {
+            visibility: visible;
+            z-index: 9;
+        }
+    }
+
+    /* Première section */
 
 .location {
     display: flex;
@@ -80,9 +83,9 @@ body {
     box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.185);
 }
 
-        .fa-location-dot {
-            margin: 0 20px 0 -30px;
-        }
+    .fa-location-dot {
+        margin: 0 20px 0 -30px;
+    }
 
 .first_section {
     background-color: #f6f6f6;
@@ -90,17 +93,17 @@ body {
     margin-bottom: 55px;
 }
 
-        .first_section_titre {
-            text-align: center;
-            font-weight: 900;
-            font-size: 1.4em;
-            margin: 0 0 7px 0;
-        }
+    .first_section_titre {
+        text-align: center;
+        font-weight: 900;
+        font-size: 1.4em;
+        margin: 0 0 7px 0;
+    }
 
-        .first_section_texte {
-            text-align: center;
-            color :rgb(78, 78, 78)
-        }
+    .first_section_texte {
+        text-align: center;
+        color :rgb(78, 78, 78)
+    }
 
 .button {
     display: block;
@@ -125,6 +128,7 @@ body {
     }
 }
 
+    /* Deuxième section*/
 
 .second_section {
     max-width: 375px;
@@ -136,51 +140,53 @@ body {
     }
 }
 
-        .second_section_title {
-            font-weight: 900;
-            font-size: 1.4em;
-            margin: 0 0 40px 15px;
+    .second_section_title {
+        font-weight: 900;
+        font-size: 1.4em;
+        margin: 0 0 40px 15px;
+    }
+
+    .boutons {
+    @include centrage_responsive;
+    }
+
+        .fonctionnement_button {
+            display: flex;
+            flex-direction: row;
+            background-color:#f6f6f6 ;
+            padding: 20px 0 20px 0;
+            width: 320px;
+            border-radius: 20px;
+            margin: 0 0 30px 20px;
+            box-shadow: 1px 2px 5px 2px rgb(0 0 0 / 9%);
+            @media (max-width: 340px) {
+                width: 90%;
+            } 
         }
 
-        .boutons {
-        @include centrage_responsive;
+        .fonctionnement_button_number {
+            background-color: $colour-primary;
+            padding: 4px 6px 0 6px;
+            border-radius: 50px;
+            color: white;
+            font-size: small;
+            position: relative;
+            left: -10px;
         }
 
-            .fonctionnement_button {
-                display: flex;
-                flex-direction: row;
-                background-color:#f6f6f6 ;
-                padding: 20px 0 20px 0;
-                width: 320px;
-                border-radius: 20px;
-                margin: 0 0 30px 20px;
-                box-shadow: 1px 2px 5px 2px rgb(0 0 0 / 9%);
-                @media (max-width: 340px) {
-                    width: 90%;
-                } 
-            }
-
-            .fonctionnement_button_number {
-                background-color: $colour-primary;
-                padding: 4px 6px 0 6px;
-                border-radius: 50px;
-                color: white;
-                font-size: small;
-                position: relative;
-                left: -10px;
-            }
-
-            .fonctionnement_icon {
-                color: #7e7e7e;
-                margin: 0 20px 0 10px;
-            }
+        .fonctionnement_icon {
+            color: #7e7e7e;
+            margin: 0 20px 0 10px;
+        }
 
 
-            .fonctionnement_button_text {
-                margin: 0;
-                font-size: 0.9em;
-                font-weight: 500;
-            }
+        .fonctionnement_button_text {
+            margin: 0;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+    /* Troisième section*/
 
 .third_section {
     background-color: #f6f6f6;
@@ -188,102 +194,101 @@ body {
     margin-top: 50px;
 }
 
+    .third_section_title {
+        font-weight: 900;
+        font-size: 1.4em;
+        margin: 0 auto 20px auto;
+        padding-left: 15px;
+        max-width: 375px;
+        @media (min-width:559px) {
+            margin: 0 0 20px 15px;
+            padding: 0;
+        }    
+    }
 
-        .third_section_title {
-            font-weight: 900;
-            font-size: 1.4em;
-            margin: 0 auto 20px auto;
-            padding-left: 15px;
-            max-width: 375px;
-            @media (min-width:559px) {
-                margin: 0 0 20px 15px;
-                padding: 0;
-            }    
-        }
+    .cards_restau {
+        @include centrage_responsive;
+        @media (min-width: 840px) {
+            justify-content: flex-start;
+            margin-left: 20px;
+        }  
+    }
 
-        .cards_restau {
-            @include centrage_responsive;
+        .card_restau {
+            width: 280px;
+            height: 200px;
+            border-radius: 16px;
+            background-color: white;
+            margin-bottom: 15px;
+            box-shadow: 2px 2px 10px -2px rgb(160, 160, 160);
+            text-decoration: none;
+            color: black;
             @media (min-width: 840px) {
-                justify-content: flex-start;
-                margin-left: 20px;
-            }  
+                margin-right: 20px;
+            }
         }
 
-                .card_restau {
-                    width: 280px;
-                    height: 200px;
-                    border-radius: 16px;
-                    background-color: white;
-                    margin-bottom: 15px;
-                    box-shadow: 2px 2px 10px -2px rgb(160, 160, 160);
-                    text-decoration: none;
-                    color: black;
-                    @media (min-width: 840px) {
-                        margin-right: 20px;
-                    }
+            .image_card_restau {
+                height: 70%;
+                width: 100%;
+                overflow: hidden;
+                margin-bottom: 3%;
+                border-radius: 0.7em 0.7em 0 0;
+            }
+
+            .image_card_restau img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .img_palette {
+                object-position: 50% 65%;
+            }
+
+            .img_note {
+                object-position: 50% 62%;
+            }
+
+            .img_française {
+                object-position: 50% 85%;
+            }
+
+            .img_délice {
+                object-position: 50% 75%;
+            }
+
+            .infos_card {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+                .text_card {
+                    margin-left: 10px;
+                    font-size: 0.9em;
                 }
 
-                        .image_card_restau {
-                            height: 70%;
-                            width: 100%;
-                            overflow: hidden;
-                            margin-bottom: 3%;
-                            border-radius: 0.7em 0.7em 0 0;
-                        }
-
-                        .image_card_restau img {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                        }
-
-                        .img_palette {
-                            object-position: 50% 65%;
-                        }
-
-                        .img_note {
-                            object-position: 50% 62%;
-                        }
-
-                        .img_française {
-                            object-position: 50% 85%;
-                        }
-
-                        .img_délice {
-                            object-position: 50% 75%;
-                        }
-
-                .infos_card {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
+                .nom_restau_accueil {
+                    font-weight: 700;
+                    margin-bottom: 5px;
                 }
 
-                        .text_card {
-                            margin-left: 10px;
-                            font-size: 0.9em;
-                        }
+            .nouveau {
+                position: relative;
+                top: -179px;
+                left: 204px;
+                width: 43px;
+                padding: 5px 10px 5px 10px;
+                margin: 0;
+                background-color: $colour-tertiary;
+                font-size: 0.7em;
+                font-weight: 500;
+                color: darken($colour-tertiary,45%);
+            }
+            
 
-                        .nom_restau_accueil {
-                            font-weight: 700;
-                            margin-bottom: 5px;
-                        }
-
-                .nouveau {
-                    position: relative;
-                    top: -179px;
-                    left: 204px;
-                    width: 43px;
-                    padding: 5px 10px 5px 10px;
-                    margin: 0;
-                    background-color: $colour-tertiary;
-                    font-size: 0.7em;
-                    font-weight: 500;
-                    color: darken($colour-tertiary,45%);
-                }
-                
-
-
+        /* Animation coeur */
 
 .coeur_animation {
     margin: 10px 20px 0 0;
@@ -303,15 +308,15 @@ body {
     }
 }
 
-@keyframes remplissage_coeur {
-    from {
-        transform: scale(0.5);
-    }
+    @keyframes remplissage_coeur {
+        from {
+            transform: scale(0.5);
+        }
 
-    to {
-        transform: scale(1.2);
+        to {
+            transform: scale(1.2);
+        }
     }
-}
 
 
 /* Footer */
@@ -365,30 +370,36 @@ body {
    
 }
 
+    /* Header menu */
+
 .header_menu {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-        .centrage_logo {
-            width: 31px;
-        }
+    .centrage_logo {
+        width: 31px;
+    }
 
-        .fa-arrow-left {
-            font-size: 1.5em;
-            margin: 21.4px 0 0 10px;
-            color: black;
-        }
+    .fa-arrow-left {
+        font-size: 1.5em;
+        margin: 21.4px 0 0 10px;
+        color: black;
+    }
 
 .main_menu {
     background-color: #f6f6f6 ;
 }
 
+    /* Première section */
+
 .image_first_section {
     width: 100%;
     height: 100%;
 }
+
+    /* Deuxième section */
 
 .second_section_menu {
     padding: 30px 15px 40px 15px;
@@ -398,46 +409,46 @@ body {
     top: -40px;
 }
 
-        .titre_menu {
+    .titre_menu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nom_restau_menu {
+        font-family: $font-logo_titre;
+        font-size: 1.5em;
+    }
+
+
+    .partie_menu {
+        margin: 35px 0 5px 0;
+        color: #353535;
+    }
+
+        .nom_plat {
+            font-weight: 700;
+            margin: 10px 0px 5px 10px;
+        
+        }
+
+        .détails_nom_plat {
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .détails_plat {
             display: flex;
+            flex-direction: row;
             justify-content: space-between;
-        }
-
-        .nom_restau_menu {
-            font-family: $font-logo_titre;
-            font-size: 1.5em;
-        }
-
-
-        .partie_menu {
-            margin: 35px 0 5px 0;
+            font-size: 0.9em;
             color: #353535;
+            margin: 0 0 10px 10px;
         }
-
-                .nom_plat {
-                    font-weight: 700;
-                    margin: 10px 0px 5px 10px;
-                
-                }
-
-                .détails_nom_plat {
-                    width: 100%;
-                    overflow: hidden;
-                }
-                
-                .détails_plat {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    font-size: 0.9em;
-                    color: #353535;
-                    margin: 0 0 10px 10px;
-                }
-                
-                .prix {
-                    font-weight: 700;
-                    margin: 0 10px 0 5px;
-                }
+        
+        .prix {
+            font-weight: 700;
+            margin: 0 10px 0 5px;
+        }
 
         .trait {
             width: 40px;
@@ -453,6 +464,8 @@ body {
         @include centrage_responsive;
     }
 }
+
+        /* Animation ajout d'un plat */
 
 .plat {
     display: flex;
@@ -478,55 +491,56 @@ body {
     }
 }
 
-        .background_ajout {
-            position: absolute;
-            background-color: $colour-tertiary;
-            padding: 18.8px 0 18.8px 0;
-            border-radius: 0 20px 20px 0;
-            font-size: 1.4em;
-            height: 22.4px;
-            width: 0;
-            visibility: hidden;
+    .background_ajout {
+        position: absolute;
+        background-color: $colour-tertiary;
+        padding: 18.8px 0 18.8px 0;
+        border-radius: 0 20px 20px 0;
+        font-size: 1.4em;
+        height: 22.4px;
+        width: 0;
+        visibility: hidden;
+    }
+
+        @keyframes ajout_plat {
+            from {
+                padding: 18.8px 0 18.8px 0;
+                transform-origin: right;
+                position: static;
+                width: 0;
+                visibility: visible;
+            }
+
+            to {
+                padding: 18.8px;
+                position: static;
+                width: 22.4px;
+                visibility: visible;
+            }
         }
 
-                @keyframes ajout_plat {
-                    from {
-                        padding: 18.8px 0 18.8px 0;
-                        transform-origin: right;
-                        position: static;
-                        width: 0;
-                        visibility: visible;
-                    }
+    .fa-circle-check {
+        color: white;
+    }
 
-                    to {
-                        padding: 18.8px;
-                        position: static;
-                        width: 22.4px;
-                        visibility: visible;
-                    }
-                }
+        @keyframes rotation_icone {
+            from {
+                transform: rotate(0turn);
+            }
 
-        .fa-circle-check {
-            color: white;
+            to {
+                transform: rotate(1turn);
+            }
         }
 
-                @keyframes rotation_icone {
-                    from {
-                        transform: rotate(0turn);
-                    }
+    .points_suspension {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
 
-                    to {
-                        transform: rotate(1turn);
-                    }
-                }
-
-        .points_suspension {
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-        }
-
-
+        /* Animation apparition progressive du menu */
+        
 .apparition_entrees {
     animation: apparition_entrees 2s;
 }
